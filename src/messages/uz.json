@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "catalog": "Katalog",
+    "about": "Haqimizda",
+    "contact": "Bog'lanish"
+  },
+  "hero": {
+    "title": "Uyingizni Go'zallashtiring Premium Idishlar Bilan",
+    "subtitle": "Chinni, kristall va zamonaviy uy buyumlari eng yaxshi narxlarda",
+    "ctaPrimary": "Katalog Ko'rish",
+    "ctaSecondary": "Bog'lanish",
+    "statsClients": "Mijozlar",
+    "statsWorkingHours": "Ish vaqti"
+  },
+  "about": {
+    "title": "Biz Haqimizda",
+    "description1": "Nur Chinnilar Olami — 15 yildan ortiq tajribaga ega premium uy-ro'zg'or buyumlari do'koni. Biz sizga eng yuqori sifatli chinni, kristall va zamonaviy uy buyumlarini taklif qilamiz.",
+    "description2": "Bizning maqsadimiz — har bir uyni go'zal va qulay qilish. Barcha mahsulotlarimiz sifat tekshiruvidan o'tgan va rasmiy kafolatga ega.",
+    "statsExperience": "Yillik tajriba",
+    "statsClients": "Qoniqgan mijozlar",
+    "statsProducts": "Mahsulot turlari"
+  },
+  "collections": {
+    "title": "Mahsulot Kategoriyalari",
+    "viewMore": "Ko'rish",
+    "chinni": {
+      "name": "Chinni To'plamlar",
+      "description": "Yuqori sifatli chinni idish-tovoq to'plamlari"
+    },
+    "crystal": {
+      "name": "Kristall Idishlar",
+      "description": "Nozik kristall ko'zalar va idishlar"
+    },
+    "kitchen": {
+      "name": "Oshxona Jihozlari",
+      "description": "Zamonaviy oshxona anjomlari"
+    },
+    "decor": {
+      "name": "Dekorativ Buyumlar",
+      "description": "Uyingizni bezash uchun noyob buyumlar"
+    },
+    "premium": {
+      "name": "Premium Kolleksiya",
+      "description": "Oltin va kumush bezakli eksklyuziv mahsulotlar"
+    },
+    "gift": {
+      "name": "Sovg'a To'plamlari",
+      "description": "Har qanday bayram uchun mukammal sovg'alar"
+    }
+  },
+  "products": {
+    "title": "Ommabop Mahsulotlar",
+    "badgeNew": "Yangi",
+    "badgePopular": "Ommabop",
+    "badgeDiscount": "Chegirma",
+    "viewDetails": "Batafsil"
+  },
+  "features": {
+    "title": "Nega Aynan Biz?",
+    "quality": {
+      "title": "Yuqori Sifat",
+      "description": "Premium materiallar va sifat kafolati"
+    },
+    "delivery": {
+      "title": "Tez Yetkazish",
+      "description": "Toshkent bo'ylab 1-2 kun ichida"
+    },
+    "price": {
+      "title": "Eng Yaxshi Narxlar",
+      "description": "To'g'ridan-to'g'ri import, vositachisiz"
+    },
+    "warranty": {
+      "title": "Kafolat",
+      "description": "Barcha mahsulotlarga rasmiy kafolat"
+    }
+  },
+  "testimonials": {
+    "title": "Mijozlar Fikri"
+  },
+  "contact": {
+    "title": "Bog'lanish",
+    "description": "Savolaringiz bormi? Biz bilan bog'laning!",
+    "address": "Manzil",
+    "addressValue": "Yandeks, maxallinski xodja grazan, Toshkent",
+    "phone": "Telefon",
+    "workingHours": "Ish vaqti",
+    "workingHoursValue": "8:30 - 18:30 (Dam olishsiz)",
+    "form": {
+      "name": "Ismingiz",
+      "namePlaceholder": "Ismingizni kiriting",
+      "phone": "Telefon raqami",
+      "phonePlaceholder": "+998 XX XXX XX XX",
+      "message": "Xabar",
+      "messagePlaceholder": "Xabaringizni yozing...",
+      "submit": "Yuborish",
+      "submitting": "Yuborilmoqda...",
+      "success": "Xabar yuborildi!",
+      "error": "Xatolik yuz berdi"
+    }
+  },
+  "footer": {
+    "tagline": "Premium Uy Buyumlari",
+    "copyright": "© {year} Nur Chinnilar Olami. Barcha huquqlar himoyalangan.",
+    "quickLinks": "Tezkor havolalar",
+    "social": "Ijtimoiy tarmoqlar"
+  },
+  "theme": {
+    "light": "Yorug'",
+    "dark": "Qorong'u",
+    "system": "Tizim"
+  },
+  "language": {
+    "uz": "O'zbekcha",
+    "ru": "Русский",
+    "en": "English"
+  }
+}

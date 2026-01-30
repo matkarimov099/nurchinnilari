@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Beautify Your Home With Premium Tableware",
+    "subtitle": "Porcelain, crystal and modern home goods at the best prices",
+    "ctaPrimary": "View Catalog",
+    "ctaSecondary": "Contact Us",
+    "statsClients": "Clients",
+    "statsWorkingHours": "Working Hours"
+  },
+  "about": {
+    "title": "About Us",
+    "description1": "Nur Chinnilar Olami is a premium home goods store with over 15 years of experience. We offer you the highest quality porcelain, crystal and modern tableware.",
+    "description2": "Our goal is to make every home beautiful and comfortable. All our products have passed quality inspection and come with official warranty.",
+    "statsExperience": "Years Experience",
+    "statsClients": "Satisfied Clients",
+    "statsProducts": "Product Types"
+  },
+  "collections": {
+    "title": "Product Categories",
+    "viewMore": "View",
+    "chinni": {
+      "name": "Porcelain Sets",
+      "description": "High quality porcelain dinnerware sets"
+    },
+    "crystal": {
+      "name": "Crystal Glassware",
+      "description": "Elegant crystal glasses and dishes"
+    },
+    "kitchen": {
+      "name": "Kitchen Appliances",
+      "description": "Modern kitchen accessories"
+    },
+    "decor": {
+      "name": "Decorative Items",
+      "description": "Unique items to decorate your home"
+    },
+    "premium": {
+      "name": "Premium Collection",
+      "description": "Exclusive items with gold and silver accents"
+    },
+    "gift": {
+      "name": "Gift Sets",
+      "description": "Perfect gifts for any occasion"
+    }
+  },
+  "products": {
+    "title": "Popular Products",
+    "badgeNew": "New",
+    "badgePopular": "Popular",
+    "badgeDiscount": "Sale",
+    "viewDetails": "Details"
+  },
+  "features": {
+    "title": "Why Choose Us?",
+    "quality": {
+      "title": "High Quality",
+      "description": "Premium materials and quality guarantee"
+    },
+    "delivery": {
+      "title": "Fast Delivery",
+      "description": "Delivery in Tashkent within 1-2 days"
+    },
+    "price": {
+      "title": "Best Prices",
+      "description": "Direct import without intermediaries"
+    },
+    "warranty": {
+      "title": "Warranty",
+      "description": "Official warranty on all products"
+    }
+  },
+  "testimonials": {
+    "title": "Customer Reviews"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have questions? Get in touch!",
+    "address": "Address",
+    "addressValue": "Yandex, Maxallinski Xodja Grazan, Tashkent",
+    "phone": "Phone",
+    "workingHours": "Working Hours",
+    "workingHoursValue": "8:30 AM - 6:30 PM (No days off)",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "phone": "Phone Number",
+      "phonePlaceholder": "+998 XX XXX XX XX",
+      "message": "Message",
+      "messagePlaceholder": "Write your message...",
+      "submit": "Send",
+      "submitting": "Sending...",
+      "success": "Message sent!",
+      "error": "An error occurred"
+    }
+  },
+  "footer": {
+    "tagline": "Premium Home Goods",
+    "copyright": "© {year} Nur Chinnilar Olami. All rights reserved.",
+    "quickLinks": "Quick Links",
+    "social": "Social Media"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "uz": "O'zbekcha",
+    "ru": "Русский",
+    "en": "English"
+  }
+}
