@@ -1,5 +1,6 @@
 {
   "nav": {
+    "menu": "Menyu",
     "home": "Bosh sahifa",
     "catalog": "Katalog",
     "about": "Haqimizda",
@@ -82,7 +83,7 @@
     "title": "Bog'lanish",
     "description": "Savolaringiz bormi? Biz bilan bog'laning!",
     "address": "Manzil",
-    "addressValue": "Yandeks, maxallinski xodja grazan, Toshkent",
+    "addressValue": "Urganch shahar, Dehqon bozori 5-blok 2-blok 2-do'kon",
     "phone": "Telefon",
     "workingHours": "Ish vaqti",
     "workingHoursValue": "8:30 - 18:30 (Dam olishsiz)",

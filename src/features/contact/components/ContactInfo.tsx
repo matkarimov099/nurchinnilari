@@ -18,35 +18,35 @@ export function ContactInfo() {
 
   const contactItems = [
     {
-      icon: <IconMapPin size={24} />,
+      icon: <IconMapPin size={20} />,
       label: t("address"),
       value: t("addressValue"),
       href: null,
       variant: "brand" as const,
     },
     {
-      icon: <IconPhone size={24} />,
+      icon: <IconPhone size={20} />,
       label: t("phone"),
       value: BUSINESS_INFO.phone,
       href: `tel:${BUSINESS_INFO.phone.replace(/\s/g, "")}`,
       variant: "gold" as const,
     },
     {
-      icon: <IconClock size={24} />,
+      icon: <IconClock size={20} />,
       label: t("workingHours"),
       value: t("workingHoursValue"),
       href: null,
       variant: "brand" as const,
     },
     {
-      icon: <IconBrandTelegram size={24} />,
+      icon: <IconBrandTelegram size={20} />,
       label: "Telegram",
       value: BUSINESS_INFO.telegram,
       href: `https://t.me/${BUSINESS_INFO.telegram.replace("@", "")}`,
       variant: "gold" as const,
     },
     {
-      icon: <IconBrandInstagram size={24} />,
+      icon: <IconBrandInstagram size={20} />,
       label: "Instagram",
       value: BUSINESS_INFO.instagram,
       href: `https://instagram.com/${BUSINESS_INFO.instagram.replace("@", "")}`,
@@ -62,11 +62,13 @@ export function ContactInfo() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <GlassCard variant="heavy" className="p-8" shine>
-          <h3 className="font-heading text-2xl font-semibold mb-2 gradient-text-brand">
+        <GlassCard variant="heavy" className="p-5 sm:p-6 md:p-8" shine>
+          <h3 className="font-heading text-xl sm:text-2xl font-semibold mb-2 gradient-text-brand">
             {t("title")}
           </h3>
-          <p className="text-muted-foreground">{t("description")}</p>
+          <p className="text-sm sm:text-base text-muted-foreground">
+            {t("description")}
+          </p>
         </GlassCard>
       </motion.div>
 
@@ -88,12 +90,12 @@ export function ContactInfo() {
           >
             <GlassCard
               variant={item.variant === "brand" ? "brand" : "gold"}
-              className="flex items-start gap-4 p-4 cursor-pointer hover-lift"
+              className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 cursor-pointer hover-lift"
             >
               {/* Icon with Glow */}
               <motion.div
                 className={cn(
-                  "flex-shrink-0 w-14 h-14 rounded-2xl",
+                  "flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-2xl",
                   item.variant === "brand"
                     ? "bg-brand-red/10 text-brand-red"
                     : "bg-gold/10 text-gold",
@@ -110,10 +112,12 @@ export function ContactInfo() {
 
               {/* Content */}
               <div className="flex-1 min-w-0">
-                <p className="text-sm text-muted-foreground mb-1">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-0.5 sm:mb-1">
                   {item.label}
                 </p>
-                <p className="font-medium truncate">{item.value}</p>
+                <p className="font-medium text-sm sm:text-base truncate line-clamp-2">
+                  {item.value}
+                </p>
               </div>
 
               {/* Arrow on hover */}

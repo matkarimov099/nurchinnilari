@@ -1,5 +1,6 @@
 {
   "nav": {
+    "menu": "Menu",
     "home": "Home",
     "catalog": "Catalog",
     "about": "About",
@@ -82,7 +83,7 @@
     "title": "Contact Us",
     "description": "Have questions? Get in touch!",
     "address": "Address",
-    "addressValue": "Yandex, Maxallinski Xodja Grazan, Tashkent",
+    "addressValue": "Urganch city, Dehkon Market, Block 5, Block 2, Shop 2",
     "phone": "Phone",
     "workingHours": "Working Hours",
     "workingHoursValue": "8:30 AM - 6:30 PM (No days off)",

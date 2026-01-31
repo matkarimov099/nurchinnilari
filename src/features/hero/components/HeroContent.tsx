@@ -43,32 +43,32 @@ export function HeroContent() {
       >
         {/* Stats Badges */}
         <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-8"
+          className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8"
           variants={itemVariants}
         >
           <motion.div
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full glass-card hover-lift"
+            className="flex items-center gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full glass-card hover-lift"
             whileHover={{ scale: 1.05, y: -2 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <IconUsers
-              size={18}
+              size={16}
               className="text-brand-red animate-pulse-glow"
             />
-            <span className="text-sm font-medium">
+            <span className="text-xs sm:text-sm font-medium">
               25,600+ {t("statsClients")}
             </span>
           </motion.div>
           <motion.div
-            className="flex items-center gap-2 px-5 py-2.5 rounded-full glass-card hover-lift"
+            className="flex items-center gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-full glass-card hover-lift"
             whileHover={{ scale: 1.05, y: -2 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <IconClock
-              size={18}
+              size={16}
               className="text-gold animate-pulse-glow-gold"
             />
-            <span className="text-sm font-medium">
+            <span className="text-xs sm:text-sm font-medium">
               8:30 - 18:30 {t("statsWorkingHours")}
             </span>
           </motion.div>

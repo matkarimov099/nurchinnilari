@@ -4,7 +4,7 @@ export const BUSINESS_INFO = {
   phone: "+998 97 152 22 23",
   telegram: "@nur_chinnilar_olami",
   instagram: "@nur_chinnilar_olami",
-  address: "Urganch shahar, Dehqon bozori 5 blok 2-blok 2-do'kon",
+  address: "Urganch shahar, Dehqon bozori 5-blok 2-blok 2-do'kon",
   workingHours: "8:30 - 18:30",
   email: "info@nur-chinnilar.uz",
 } as const;

@@ -85,7 +85,7 @@ export function CategoryCard({ id, icon, delay = 0 }: CategoryCardProps) {
         <GlassCard
           variant="brand"
           className={cn(
-            "p-8 text-center cursor-pointer",
+            "p-5 sm:p-6 md:p-8 text-center cursor-pointer",
             "hover-lift hover-glow",
           )}
           shine
@@ -102,9 +102,9 @@ export function CategoryCard({ id, icon, delay = 0 }: CategoryCardProps) {
           {/* Icon Container */}
           <motion.div
             className={cn(
-              "inline-flex items-center justify-center w-20 h-20",
+              "inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20",
               "rounded-2xl glass-card-heavy",
-              "mb-6 relative overflow-hidden",
+              "mb-4 sm:mb-6 relative overflow-hidden",
             )}
             whileHover={{
               rotate: [0, -10, 10, -10, 10, 0],
@@ -132,25 +132,25 @@ export function CategoryCard({ id, icon, delay = 0 }: CategoryCardProps) {
               }}
             />
             <Icon
-              size={36}
-              stroke={1.5}
+              size={28}
+              strokeWidth={1.5}
               className="relative z-10 text-brand-red group-hover:text-gold transition-colors duration-300"
             />
           </motion.div>
 
           {/* Title */}
-          <h3 className="font-heading text-xl font-semibold mb-3 group-hover:text-brand-red transition-colors">
+          <h3 className="font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3 group-hover:text-brand-red transition-colors">
             {t(`${id}.name`)}
           </h3>
 
           {/* Description */}
-          <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+          <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-2">
             {t(`${id}.description`)}
           </p>
 
           {/* View More Link */}
           <motion.span
-            className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:text-gold transition-colors"
+            className="inline-flex items-center gap-2 text-primary font-medium text-xs sm:text-sm group-hover:text-gold transition-colors"
             initial={{ opacity: 0.8 }}
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}

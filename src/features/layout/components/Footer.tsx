@@ -22,6 +22,7 @@ const socialIcons = {
 export function Footer() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
+  const tContact = useTranslations("contact");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -30,8 +31,8 @@ export function Footer() {
       <div className="absolute inset-0 aurora-bg opacity-10" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full glass-card-heavy blur-3xl opacity-5" />
 
-      <div className="container max-w-6xl mx-auto py-12 md:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+      <div className="container px-4 sm:px-6 py-10 sm:py-12 md:py-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -64,10 +65,10 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-2">
-              {BUSINESS_INFO.address}
+              {tContact("addressValue")}
             </p>
             <p className="text-sm text-gray-400">
-              {BUSINESS_INFO.workingHours}
+              {tContact("workingHoursValue")}
             </p>
           </motion.div>
 

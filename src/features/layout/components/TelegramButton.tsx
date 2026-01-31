@@ -13,7 +13,7 @@ export function TelegramButton() {
       href={telegramUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#0088cc] text-white shadow-lg hover:scale-110 transition-transform"
+      className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#0088cc] text-white shadow-lg hover:scale-110 transition-transform"
       initial={false}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 1, type: "spring", stiffness: 200 }}
@@ -21,7 +21,7 @@ export function TelegramButton() {
       whileTap={{ scale: 0.95 }}
       aria-label="Contact us on Telegram"
     >
-      <IconBrandTelegram size={10} className="md:size-8" />
+      <IconBrandTelegram size={28} />
 
       {/* Pulse Animation */}
       <span className="absolute inset-0 rounded-full bg-[#0088cc] animate-ping opacity-30" />

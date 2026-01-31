@@ -41,7 +41,7 @@ export function FeatureCard({
         <GlassCard
           variant="default"
           className={cn(
-            "group text-center p-8 cursor-pointer",
+            "group text-center p-5 sm:p-6 md:p-8 cursor-pointer",
             "hover-lift transition-all duration-300",
           )}
           shine
@@ -50,9 +50,9 @@ export function FeatureCard({
           <motion.div
             className={cn(
               "inline-flex items-center justify-center",
-              "w-20 h-20 rounded-2xl",
+              "w-16 h-16 sm:w-20 sm:h-20 rounded-2xl",
               iconBg[variant],
-              "mb-6 relative overflow-hidden",
+              "mb-4 sm:mb-6 relative overflow-hidden",
             )}
             whileHover={{
               rotate: [0, -5, 5, -5, 0],
@@ -85,7 +85,7 @@ export function FeatureCard({
           {/* Title */}
           <motion.h3
             className={cn(
-              "font-heading text-xl font-semibold mb-3",
+              "font-heading text-lg sm:text-xl font-semibold mb-2 sm:mb-3",
               "group-hover:text-primary transition-colors",
             )}
           >
@@ -93,7 +93,9 @@ export function FeatureCard({
           </motion.h3>
 
           {/* Description */}
-          <p className="text-muted-foreground leading-relaxed">{description}</p>
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            {description}
+          </p>
 
           {/* Hover Effect Line */}
           <motion.div

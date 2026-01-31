@@ -54,7 +54,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
         aria-haspopup="true"
       >
         <IconLanguage size={20} />
-        <span className="hidden sm:inline text-sm font-medium">
+        <span className="text-sm font-medium">
           {currentLocale.code.toUpperCase()}
         </span>
         <IconChevronDown

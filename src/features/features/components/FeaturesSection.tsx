@@ -17,24 +17,32 @@ export function FeaturesSection() {
     {
       id: "quality",
       icon: (
-        <IconShieldCheck size={36} stroke={1.5} className="text-brand-red" />
+        <IconShieldCheck
+          size={32}
+          strokeWidth={1.5}
+          className="text-brand-red"
+        />
       ),
       variant: "brand" as const,
     },
     {
       id: "delivery",
-      icon: <IconTruck size={36} stroke={1.5} className="text-gold" />,
+      icon: <IconTruck size={32} strokeWidth={1.5} className="text-gold" />,
       variant: "gold" as const,
     },
     {
       id: "price",
-      icon: <IconPigMoney size={36} stroke={1.5} className="text-gold" />,
+      icon: <IconPigMoney size={32} strokeWidth={1.5} className="text-gold" />,
       variant: "gold" as const,
     },
     {
       id: "warranty",
       icon: (
-        <IconCertificate size={36} stroke={1.5} className="text-brand-red" />
+        <IconCertificate
+          size={32}
+          strokeWidth={1.5}
+          className="text-brand-red"
+        />
       ),
       variant: "brand" as const,
     },
