@@ -2,6 +2,8 @@
 
 import { IconQuote, IconStar } from "@tabler/icons-react";
 import { motion } from "motion/react";
+import { GlassCard } from "@/shared/components/aceternity";
+import { cn } from "@/shared/lib/utils";
 
 interface TestimonialCardProps {
   name: string;
@@ -16,42 +18,127 @@ export function TestimonialCard({
   rating,
   delay = 0,
 }: TestimonialCardProps) {
+  // Get initials for avatar
+  const initials = name
+    .split(" ")
+    .map((n) => n.charAt(0).toUpperCase())
+    .join("")
+    .slice(0, 2);
+
   return (
     <motion.div
-      className="p-6 md:p-8 rounded-2xl bg-card border border-border"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ delay, duration: 0.5 }}
+      initial={{ opacity: 0, y: 40, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        delay,
+        type: "spring",
+        damping: 15,
+        stiffness: 200,
+      }}
       viewport={{ once: true }}
     >
-      {/* Quote Icon */}
-      <IconQuote size={40} className="text-accent/30 mb-4" />
+      <GlassCard
+        variant="heavy"
+        className={cn(
+          "p-6 md:p-8 cursor-pointer",
+          "hover-lift transition-all duration-300",
+          "animate-float-gentle",
+        )}
+        shine
+      >
+        {/* Quote Icon */}
+        <motion.div
+          className="mb-4"
+          animate={{
+            rotate: [0, -5, 5, -5, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "easeInOut",
+          }}
+        >
+          <IconQuote size={40} className="text-gold/40 dark:text-gold/30" />
+        </motion.div>
 
-      {/* Rating */}
-      <div className="flex gap-1 mb-4">
-        {[1, 2, 3, 4, 5].map((star) => (
-          <IconStar
-            key={star}
-            size={18}
-            className={
-              star <= rating ? "text-accent fill-accent" : "text-muted"
-            }
-          />
-        ))}
-      </div>
-
-      {/* Text */}
-      <p className="text-foreground/90 italic leading-relaxed mb-6">"{text}"</p>
-
-      {/* Author */}
-      <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-          <span className="text-primary font-semibold">
-            {name.charAt(0).toUpperCase()}
-          </span>
+        {/* Rating Stars */}
+        <div className="flex gap-1 mb-4">
+          {[1, 2, 3, 4, 5].map((star, index) => (
+            <motion.div
+              key={star}
+              initial={{ opacity: 0, scale: 0, rotate: -180 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{
+                delay: delay + 0.1 + index * 0.05,
+                type: "spring",
+                damping: 10,
+                stiffness: 200,
+              }}
+              viewport={{ once: true }}
+            >
+              <IconStar
+                size={20}
+                className={cn(
+                  star <= rating
+                    ? "text-gold fill-gold drop-shadow-lg"
+                    : "text-muted-foreground/30",
+                  "transition-colors duration-300",
+                )}
+              />
+            </motion.div>
+          ))}
         </div>
-        <span className="font-medium">{name}</span>
-      </div>
+
+        {/* Testimonial Text */}
+        <p className="text-foreground/90 italic leading-relaxed mb-6">
+          "{text}"
+        </p>
+
+        {/* Author Info */}
+        <div className="flex items-center gap-4">
+          {/* Avatar with Glow */}
+          <motion.div
+            className="relative"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <div className="w-12 h-12 rounded-full gradient-brand flex items-center justify-center animate-pulse-glow">
+              <span className="text-white font-semibold text-lg">
+                {initials}
+              </span>
+            </div>
+            {/* Decorative Ring */}
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-gold/30"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 0, 0.5],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              }}
+            />
+          </motion.div>
+
+          {/* Name */}
+          <div>
+            <motion.span className="font-semibold text-foreground block group-hover:text-brand-red transition-colors">
+              {name}
+            </motion.span>
+            <motion.span
+              className="text-sm text-muted-foreground"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: delay + 0.5 }}
+              viewport={{ once: true }}
+            >
+              Mijoz
+            </motion.span>
+          </div>
+        </div>
+      </GlassCard>
     </motion.div>
   );
 }

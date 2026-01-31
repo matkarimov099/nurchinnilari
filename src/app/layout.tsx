@@ -70,6 +70,7 @@ export default function RootLayout({
     <html lang="uz" suppressHydrationWarning>
       <body
         className={`${playfair.variable} ${cormorant.variable} ${montserrat.variable} ${cinzel.variable} font-sans antialiased`}
+        suppressHydrationWarning
       >
         {children}
         <Analytics />

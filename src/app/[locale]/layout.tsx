@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { Providers } from "@/core/providers";
-import { Footer, Header, WhatsAppButton } from "@/features/layout";
+import { Footer, Header, TelegramButton } from "@/features/layout";
 import { routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
@@ -23,9 +23,9 @@ export default async function LocaleLayout({
     <Providers>
       <NextIntlClientProvider messages={messages} locale={locale}>
         <Header />
-        <main>{children}</main>
+        <main className="overflow-x-hidden">{children}</main>
         <Footer />
-        <WhatsAppButton />
+        <TelegramButton />
       </NextIntlClientProvider>
     </Providers>
   );

@@ -29,8 +29,15 @@ export function TestimonialsSection() {
   const t = useTranslations("testimonials");
 
   return (
-    <section id="testimonials" className="py-20 md:py-32">
-      <div className="container">
+    <section
+      id="testimonials"
+      className="py-20 md:py-32 relative overflow-hidden"
+    >
+      {/* Background Effects */}
+      <div className="absolute inset-0 aurora-bg opacity-20" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full glass-card-heavy blur-3xl opacity-10" />
+
+      <div className="container relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <motion.div
           className="text-center mb-12 md:mb-16"
@@ -39,10 +46,26 @@ export function TestimonialsSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <motion.h2
+            className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 gradient-text-gold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
             {t("title")}
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
+          </motion.h2>
+          <motion.div
+            className="flex items-center justify-center gap-4"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="h-0.5 w-12 gradient-premium rounded-full" />
+            <div className="h-1 w-20 gradient-brand rounded-full animate-scale-pulse" />
+            <div className="h-0.5 w-12 gradient-premium rounded-full" />
+          </motion.div>
         </motion.div>
 
         {/* Testimonials Grid */}
@@ -53,7 +76,7 @@ export function TestimonialsSection() {
               name={testimonial.name}
               text={testimonial.text}
               rating={testimonial.rating}
-              delay={index * 0.1}
+              delay={index * 0.15}
             />
           ))}
         </div>

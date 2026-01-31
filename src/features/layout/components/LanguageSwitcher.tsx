@@ -1,15 +1,15 @@
 "use client";
 
 import { IconChevronDown, IconLanguage } from "@tabler/icons-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "@/i18n/routing";
 import { cn } from "@/shared/lib/utils";
 
 const locales = [
-  { code: "uz", label: "O'zbekcha", flag: "🇺🇿" },
-  { code: "ru", label: "Русский", flag: "🇷🇺" },
-  { code: "en", label: "English", flag: "🇬🇧" },
+  { code: "uz", label: "O'zbekcha" },
+  { code: "ru", label: "Русский" },
+  { code: "en", label: "English" },
 ] as const;
 
 interface LanguageSwitcherProps {
@@ -20,7 +20,6 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const _t = useTranslations("language");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -56,7 +55,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
       >
         <IconLanguage size={20} />
         <span className="hidden sm:inline text-sm font-medium">
-          {currentLocale.flag} {currentLocale.code.toUpperCase()}
+          {currentLocale.code.toUpperCase()}
         </span>
         <IconChevronDown
           size={16}
@@ -76,7 +75,6 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
                 locale === loc.code && "text-primary font-medium",
               )}
             >
-              <span>{loc.flag}</span>
               <span>{loc.label}</span>
             </button>
           ))}

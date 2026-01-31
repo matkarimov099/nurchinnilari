@@ -1,78 +1,120 @@
 "use client";
 
 import { IconClock, IconUsers } from "@tabler/icons-react";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { GlassCard, GlowingButton } from "@/shared/components/aceternity";
+import { cn } from "@/shared/lib/utils";
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 export function HeroContent() {
   const t = useTranslations("hero");
 
   return (
-    <div className="text-center max-w-4xl mx-auto px-4">
-      {/* Stats Badges */}
-      <motion.div
-        className="flex flex-wrap justify-center gap-4 mb-8"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
+    <motion.div
+      className="text-center max-w-4xl mx-auto px-4"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      {/* Glass Card Content Wrapper */}
+      <GlassCard
+        variant="heavy"
+        className="p-8 md:p-12 backdrop-blur-xl mx-auto"
+        shine
       >
-        <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-border shadow-sm">
-          <IconUsers size={18} className="text-brand-red" />
-          <span className="text-sm font-medium">
-            25,600+ {t("statsClients")}
-          </span>
-        </div>
-        <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur-sm border border-border shadow-sm">
-          <IconClock size={18} className="text-gold" />
-          <span className="text-sm font-medium">
-            8:30 - 18:30 {t("statsWorkingHours")}
-          </span>
-        </div>
-      </motion.div>
+        {/* Stats Badges */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 mb-8"
+          variants={itemVariants}
+        >
+          <motion.div
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full glass-card hover-lift"
+            whileHover={{ scale: 1.05, y: -2 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <IconUsers
+              size={18}
+              className="text-brand-red animate-pulse-glow"
+            />
+            <span className="text-sm font-medium">
+              25,600+ {t("statsClients")}
+            </span>
+          </motion.div>
+          <motion.div
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full glass-card hover-lift"
+            whileHover={{ scale: 1.05, y: -2 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <IconClock
+              size={18}
+              className="text-gold animate-pulse-glow-gold"
+            />
+            <span className="text-sm font-medium">
+              8:30 - 18:30 {t("statsWorkingHours")}
+            </span>
+          </motion.div>
+        </motion.div>
 
-      {/* Main Headline */}
-      <motion.h1
-        className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-      >
-        <span className="bg-gradient-to-r from-brand-red via-brand-red-dark to-brand-red bg-clip-text text-transparent">
+        {/* Main Headline */}
+        <motion.h1
+          className={cn(
+            "font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl",
+            "font-bold tracking-tight mb-6",
+            "gradient-text-mixed",
+          )}
+          variants={itemVariants}
+        >
           {t("title")}
-        </span>
-      </motion.h1>
+        </motion.h1>
 
-      {/* Subtitle */}
-      <motion.p
-        className="font-body text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
-      >
-        {t("subtitle")}
-      </motion.p>
+        {/* Subtitle */}
+        <motion.p
+          className="font-sans text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          variants={itemVariants}
+        >
+          {t("subtitle")}
+        </motion.p>
 
-      {/* CTA Buttons */}
-      <motion.div
-        className="flex flex-col sm:flex-row justify-center gap-4"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.8, duration: 0.6 }}
-      >
-        <Link
-          href="#collections"
-          className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full gradient-brand text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+        {/* CTA Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row justify-center gap-4"
+          variants={itemVariants}
         >
-          {t("ctaPrimary")}
-        </Link>
-        <Link
-          href="#contact"
-          className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-gold text-gold hover:bg-gold hover:text-charcoal font-semibold transition-all duration-300"
-        >
-          {t("ctaSecondary")}
-        </Link>
-      </motion.div>
-    </div>
+          <GlowingButton
+            href="#collections"
+            variant="brand"
+            className="text-base px-8 py-4 shadow-xl shadow-brand-red/30 hover:shadow-2xl hover:shadow-brand-red/40"
+          >
+            {t("ctaPrimary")}
+          </GlowingButton>
+          <GlowingButton
+            href="#contact"
+            variant="gold"
+            className="text-base px-8 py-4 shadow-xl shadow-gold/30 hover:shadow-2xl hover:shadow-gold/40"
+          >
+            {t("ctaSecondary")}
+          </GlowingButton>
+        </motion.div>
+      </GlassCard>
+    </motion.div>
   );
 }
