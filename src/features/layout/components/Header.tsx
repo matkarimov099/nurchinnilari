@@ -48,7 +48,7 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-transparent glass-card"
     >
       <div className="container max-w-6xl mx-auto relative h-16 md:h-20">
-        <div className="absolute left-0 top-1/2 -translate-y-1/2">
+        <div className="absolute left-4 md:left-0 top-1/2 -translate-y-1/2">
           {/* Logo */}
           <motion.a
             href="#home"
@@ -88,7 +88,7 @@ export function Header() {
         </div>
 
         {/* Right side actions */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 lg:gap-3">
+        <div className="absolute right-4 md:right-0 top-1/2 -translate-y-1/2 flex items-center gap-2 lg:gap-3">
           {/* Actions */}
           <div className="flex items-center gap-2">
             <LanguageSwitcher />

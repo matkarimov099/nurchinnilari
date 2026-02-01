@@ -1,8 +1,7 @@
 "use client";
 
-import { HeroBackground } from "./HeroBackground";
+import { HeroBackground, ScrollIndicator } from "@/features/hero";
 import { HeroContent } from "./HeroContent";
-import { ScrollIndicator } from "./ScrollIndicator";
 
 export function HeroSection() {
   return (
@@ -11,7 +10,7 @@ export function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       <HeroBackground />
-      <div className="relative z-10 container py-20">
+      <div className="relative z-10 container pt-28 pb-32">
         <HeroContent />
       </div>
       <ScrollIndicator />
