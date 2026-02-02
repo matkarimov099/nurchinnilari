@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nur Chinnilar Olami
 
-## Getting Started
+Premium uy buyumlari do'koni uchun zamonaviy landing page.
 
-First, run the development server:
+## Tech Stack
+
+- **Next.js 16** - App Router
+- **React 19** - React Compiler bilan
+- **TypeScript** - Strict mode
+- **Tailwind CSS 4** - PostCSS plugin
+- **motion/react** - Animatsiyalar
+- **next-intl** - Ko'p tilli qo'llab-quvvatlash (uz, ru, en)
+- **next-themes** - Dark/Light mode
+- **Biome** - Linting va formatting
+
+## Ishga tushirish
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Dependencylarni o'rnatish
+pnpm install
+
+# Development server
 pnpm dev
-# or
-bun dev
+
+# Production build
+pnpm build
+
+# Production server
+pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Skriptlar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev      # Dev server (http://localhost:3000)
+pnpm build    # Production build
+pnpm start    # Production server
+pnpm lint     # Linter tekshiruvi
+pnpm format   # Kod formatlash
+pnpm fix      # To'liq tuzatish (format + lint + unsafe)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Loyiha tuzilishi
 
-## Learn More
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── [locale]/           # Dinamik til yo'nalishlari (uz|ru|en)
+│   └── globals.css         # Global stillar
+├── core/providers/         # Provider komponentlari
+├── features/               # Feature modullari
+│   ├── hero/               # Bosh qism
+│   ├── about/              # Biz haqimizda
+│   ├── collections/        # Mahsulot kategoriyalari
+│   ├── features/           # Afzalliklar
+│   ├── testimonials/       # Mijozlar fikri
+│   ├── contact/            # Aloqa
+│   └── layout/             # Header, Footer, Navigation
+├── shared/
+│   ├── components/         # UI komponentlari
+│   ├── config/             # Konfiguratsiya
+│   └── lib/                # Yordamchi funksiyalar
+├── i18n/                   # Internationalization
+└── messages/               # Tarjima fayllari (uz, ru, en)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Tillar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **O'zbek** (default) - `/uz`
+- **Rus** - `/ru`
+- **Ingliz** - `/en`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Brand ranglari
 
-## Deploy on Vercel
+- **Primary (Qizil)**: `#ED1B24`
+- **Accent (Oltin)**: `#D4AF37`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Aloqa
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Telefon**: +998 97 152 22 23
+- **Telegram**: [@nur_chinnilar_olami](https://t.me/nur_chinnilar_olami)
+- **Instagram**: [@nur_chinnilar_olami](https://www.instagram.com/nur_chinnilar_olami)
+- **Manzil**: Urganch shahar, Dehqon bozori 5-blok 2-blok 2-do'kon
